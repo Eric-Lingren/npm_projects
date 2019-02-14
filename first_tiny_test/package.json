@@ -1,4 +1,14 @@
 {
     "name": "@fxhacker/tiny",
-    "version" : "1.0.0"
+    "version": "2.0.0",
+    "description": "Removes all spaces from a string",
+    "license": "MIT",
+    "repository": "Eric-Lingren/npm_projects",
+    "main": "index.js",
+    "keywords": [
+        "tiny",
+        "npm",
+        "package",
+        "Eric-Lingren"
+    ]
 }
