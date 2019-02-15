@@ -1,24 +1,16 @@
-"# npm_projects" 
+////////////////////////
+//     Tiny Test      //
+////////////////////////
+
+A simple test NPM project that removes all whitespaces from a string.
+
+https://www.npmjs.com/package/@fxhacker/tiny
 
 
 ////////////////////////
-//      Tiny Test     //
+//     Get Date       //
 ////////////////////////
 
-Removes all spaces from a string.
+A NPM that allows easy date formats and and individual parts of a date for use.  It only manipluates the current time and date based on system time.
 
-Install
-$ npm install @fxhacker/tiny
-Usage
-const tiny = require("@fxhacker/tiny");
-
-tiny("So much space!");
-//=> "Somuchspace!"
-
-tiny(1337);
-//=> Uncaught TypeError: Tiny wants a string!
-//    at tiny (<anonymous>:2:41)
-//    at <anonymous>:1:1
-
-
-////////////////////////////////////////////////////////////////////////////////////
+https://www.npmjs.com/package/@fxhacker/get_date
