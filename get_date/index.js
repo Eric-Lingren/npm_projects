@@ -1,27 +1,12 @@
-let d1 = Date.now()
-
-let d2 =  Date(Date.now())
-
-let d3 = new Date()
-
-// let d4 = Date.getDay()
-
-console.log(d1)
-console.log(d2)
-console.log(d3)
-
-function _getDayOfWeekShort(){
+function _getDayOfWeek(){
     let date = Date(Date.now())
     let splitDate = date.split(" ")
     let day = splitDate[0]
     return day
 }
 
-console.log(_getDayOfWeekLong())
 
-
-
-function _getDayOfWeekLong(){
+function _getDayOfWeekFull(){
     let date = Date(Date.now())
     let splitDate = date.split(" ")
     let day = splitDate[0]
@@ -48,28 +33,23 @@ function _getDayOfWeekLong(){
             return "Saturday";
             break;
         default:
-            "We apparently had an error.  Apologies for breaking. :\( ";
+            "We apparently had an error.  Apologies for breaking. :\( "
             break;
     }
-};
-
-console.log(_getDayOfWeekLong())
+}
 
 
 
 
-function _getMonthShort(){
-    let date = Date(Date.now());
+function _getMonth(){
+    let date = Date(Date.now())
     let splitDate = date.split(" ");
-    let month = splitDate[1];
-    return month;
-};
-
-console.log(_getMonthShort())
+    let month = splitDate[1]
+    return month
+}
 
 
-
-function _getMonthLong(){
+function _getMonthFull(){
     let date = Date(Date.now())
     let splitDate = date.split(" ")
     let month = splitDate[1]
@@ -116,16 +96,106 @@ function _getMonthLong(){
     }
 }
 
-console.log(_getMonthLong())
-
-
 
 function _getDayNumber(){
-    let date = Date(Date.now());
-    let splitDate = date.split(" ");
-    let dayNumber = splitDate[2];
-    console.log(typeof(dayNumber))
-    return dayNumber;
-}; 
+    let date = Date(Date.now())
+    let splitDate = date.split(" ")
+    let dayNumber = parseInt(splitDate[2])
+    return dayNumber
+}
 
-console.log(_getDayNumber())
+
+function _getYear(){
+    let date = Date(Date.now())
+    let splitDate = date.split(" ")
+    let year = parseInt(splitDate[3])
+    return year
+}
+
+
+function _getTime(){
+    let date = Date(Date.now())
+    let splitDate = date.split(" ")
+    let defaultTime = splitDate[4]
+    let hours = parseInt(defaultTime)
+
+    if (hours === 0 || hours > 12){
+        if(hours === 13){
+            hours = '01'
+        } else if(hours === 14){
+            hours = '02'
+        } else if(hours === 15){
+            hours = '03'
+        } else if(hours === 16){
+            hours = '04'
+        } else if(hours === 17){
+            hours = '05'
+        } else if(hours === 18){
+            hours = '06'
+        } else if(hours === 19){
+            hours = '07'
+        } else if(hours === 20){
+            hours = '08'
+        } else if(hours ===21){
+            hours = '09'
+        } else if(hours === 22){
+            hours = '10'
+        } else if(hours === 23){
+            hours = '11'
+        } else if(hours === 0){
+            hours = '12'
+        }
+    }
+
+    let minutes = defaultTime.slice(3, 5)
+    let seconds = defaultTime.slice(6, 8)
+    let newTime = `${hours}:${minutes}:${seconds}`
+
+    return newTime
+    
+}
+
+
+function _getMilitaryTime(){
+    let date = Date(Date.now())
+    let splitDate = date.split(" ")
+    let militaryTime = splitDate[4]
+    return militaryTime
+}
+
+
+function _getHour(){
+    let date = Date(Date.now())
+    let splitDate = date.split(" ")
+    let hour = parseInt(splitDate[4])
+    return hour
+}
+
+
+function _getMinute(){
+    let date = Date(Date.now())
+    let splitDate = date.split(" ")
+    let defaultTime = splitDate[4]
+    let minutes = parseInt(defaultTime.slice(3, 5))
+    return minutes
+}
+
+
+function _getSecond(){
+    let date = Date(Date.now())
+    let splitDate = date.split(" ")
+    let defaultTime = splitDate[4]
+    let seconds = parseInt(defaultTime.slice(6, 8))
+    return seconds
+}
+
+
+function _getTimezone(){
+    let date = Date(Date.now())
+    let splitDate = date.split(" ")
+    let timeZone = splitDate[5]
+    return timeZone;
+}
+
+
+
