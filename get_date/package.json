@@ -1,6 +1,6 @@
 {
     "name": "@fxhacker/get_date",
-    "version": "2.0.0",
+    "version": "2.6.0",
     "description": "Lets you easily obtain and parse current date and time info",
     "license": "MIT",
     "repository": "Eric-Lingren/npm_projects",

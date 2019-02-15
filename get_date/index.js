@@ -1,4 +1,4 @@
-function _getDayOfWeek(){
+function getDayOfWeek() {
     let date = Date(Date.now())
     let splitDate = date.split(" ")
     let day = splitDate[0]
@@ -6,7 +6,7 @@ function _getDayOfWeek(){
 }
 
 
-function _getDayOfWeekFull(){
+function getDayOfWeekFull(){
     let date = Date(Date.now())
     let splitDate = date.split(" ")
     let day = splitDate[0]
@@ -41,7 +41,7 @@ function _getDayOfWeekFull(){
 
 
 
-function _getMonth(){
+function getMonth(){
     let date = Date(Date.now())
     let splitDate = date.split(" ");
     let month = splitDate[1]
@@ -49,7 +49,7 @@ function _getMonth(){
 }
 
 
-function _getMonthFull(){
+function getMonthFull(){
     let date = Date(Date.now())
     let splitDate = date.split(" ")
     let month = splitDate[1]
@@ -97,7 +97,7 @@ function _getMonthFull(){
 }
 
 
-function _getDayNumber(){
+function getDayNumber(){
     let date = Date(Date.now())
     let splitDate = date.split(" ")
     let dayNumber = parseInt(splitDate[2])
@@ -105,7 +105,7 @@ function _getDayNumber(){
 }
 
 
-function _getYear(){
+function getYear(){
     let date = Date(Date.now())
     let splitDate = date.split(" ")
     let year = parseInt(splitDate[3])
@@ -113,7 +113,7 @@ function _getYear(){
 }
 
 
-function _getTime(){
+function getTime(){
     let date = Date(Date.now())
     let splitDate = date.split(" ")
     let defaultTime = splitDate[4]
@@ -156,7 +156,7 @@ function _getTime(){
 }
 
 
-function _getMilitaryTime(){
+function getMilitaryTime(){
     let date = Date(Date.now())
     let splitDate = date.split(" ")
     let militaryTime = splitDate[4]
@@ -164,7 +164,7 @@ function _getMilitaryTime(){
 }
 
 
-function _getHour(){
+function getHours(){
     let date = Date(Date.now())
     let splitDate = date.split(" ")
     let hour = parseInt(splitDate[4])
@@ -172,7 +172,7 @@ function _getHour(){
 }
 
 
-function _getMinute(){
+function getMinutes(){
     let date = Date(Date.now())
     let splitDate = date.split(" ")
     let defaultTime = splitDate[4]
@@ -181,7 +181,7 @@ function _getMinute(){
 }
 
 
-function _getSecond(){
+function getSeconds(){
     let date = Date(Date.now())
     let splitDate = date.split(" ")
     let defaultTime = splitDate[4]
@@ -190,10 +190,24 @@ function _getSecond(){
 }
 
 
-function _getTimezone(){
+function getTimezone(){
     let date = Date(Date.now())
     let splitDate = date.split(" ")
     let timeZone = splitDate[5]
     return timeZone;
 }
 
+module.exports = {
+    getTimeZone: getTimezone(),
+    getSeconds: getSeconds(),
+    getMinutes: getMinutes(),
+    getHours: getHours(),
+    getMilitaryTime: getMilitaryTime(),
+    getTime: getTime(),
+    getYear: getYear(),
+    getMonthFull: getMonthFull(),
+    getMonth: getMonth(),
+    getDayNumber: getDayNumber(),
+    getDayOfWeekFull: getDayOfWeekFull(),
+    getDayOfWeek: getDayOfWeek()
+}
