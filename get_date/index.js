@@ -197,5 +197,3 @@ function _getTimezone(){
     return timeZone;
 }
 
-
-
